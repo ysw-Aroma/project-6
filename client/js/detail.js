@@ -1,5 +1,5 @@
 // var id = 1;
-var id = new URLSearchParams(location.search).get('id');
+var id = new URLSearchParams(location.search).get('id'); //从url获取文章id
 
 
 function showComment() {
@@ -15,7 +15,7 @@ function showComment() {
     //         console.log(res.data);
     //     }
     // });
-
+    // 展示页面
     $.ajax({
         type: "get",
         url: "http://127.0.0.1:8888/api/articles/" + id + "/comments",
@@ -45,7 +45,7 @@ function showComment() {
 
 };
 showComment();
-
+//添加评论    --form表单提交行为
 $('#upload').submit(function (e) {
     e.preventDefault();
     var data = $(this).serialize();
@@ -58,7 +58,7 @@ $('#upload').submit(function (e) {
         success: function (res) {
             if (res.status == 0) {
                 $('#upload')[0].reset();
-                showComment();
+                showComment(); //发布评论页面重新加载
             }
         }
     });
