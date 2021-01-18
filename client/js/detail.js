@@ -18,7 +18,7 @@ function showComment() {
     // 展示页面
     $.ajax({
         type: "get",
-        url: "api/articles/" + id + "comments",
+        url: "http://localhost:8888/api/articles/" + id + "/comments",
         success: function (res) {
             console.log(res);
 
@@ -52,7 +52,7 @@ $('#upload').submit(function (e) {
     // console.log(data);
     $.ajax({
         type: "post",
-        url: "api/articles/" + id + "comments",
+        url: "http://localhost:8888/api/articles/" + id + "/comments",
         data: data,
 
         success: function (res) {
