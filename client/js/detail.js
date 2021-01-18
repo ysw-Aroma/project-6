@@ -1,6 +1,8 @@
 // var id = 1;
-var id = new URLSearchParams(location.search).get('id'); //从url获取文章id
-
+// var id = new URLSearchParams(location.search).get('id'); //从url获取文章id
+let url = location.search;
+id = url.slice(url.indexOf('=') + 1);
+console.log(id);
 
 function showComment() {
     // var params = {
