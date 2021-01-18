@@ -4,6 +4,7 @@ $(function () {
         pagesize: 6,
     }
     let total;
+
     function loadarticlelist() {
         $.ajax({
             url: 'http://localhost:8888/api/articles',
@@ -15,7 +16,7 @@ $(function () {
                         let div = $(`
                         <div class="item">
                         <h4>
-                          <a href="${'../detail.html?' + item.id}">${item.title}</a>
+                          <a href="${'./detail.html?id=' + item.id}">${item.title}</a>
                         </h4>
                         <p class="meta">
                           <span>15分钟前 分享至</span>

@@ -37,7 +37,7 @@ $.ajaxPrefilter(function (option) {
             // 把无效的token清除
             localStorage.removeItem('token')
             // 如果身份验证失败了，就跳转到登录页面
-            parent.window.location.href = '../login.html'
+            parent.window.location.href = '/admin/login.html'
         }
     }
 })

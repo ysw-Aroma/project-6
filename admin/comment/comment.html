@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>评论模块</title>
+    <meta charset="UTF-8">
+    <title>评论模块</title>
 </head>
+<link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+
 <body>
-  
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <span>评论管理</span>
+        </div>
+        <div class="layui-card-body">
+            <!-- 文章列表的表格 -->
+            <table class="layui-table">
+                <colgroup>
+                    <col width="5%">
+                    <col width="15%">
+                    <col width="30%">
+                    <col width="20%">
+                    <col width="20%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>评论人</th>
+                        <th>评论内容</th>
+                        <th>评论时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 这里放数据 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
+<script src="../assets/lib/jquery.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/lib/layui/layui.all.js"></script>
+<script src="../assets/js/comment/comment.js"></script>
+
 </html>
