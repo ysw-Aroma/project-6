@@ -1,6 +1,6 @@
 // var id = 1;
 var id = new URLSearchParams(location.search).get('id'); //从url获取文章id
-
+console.log(id);
 
 function showComment() {
     // var params = {
@@ -18,7 +18,7 @@ function showComment() {
     // 展示页面
     $.ajax({
         type: "get",
-        url: "http://127.0.0.1:8888/api/articles/" + id + "/comments",
+        url: "api/articles/" + id + "comments",
         success: function (res) {
             console.log(res);
 
@@ -52,7 +52,7 @@ $('#upload').submit(function (e) {
     // console.log(data);
     $.ajax({
         type: "post",
-        url: "http://127.0.0.1:8888/api/articles/" + id + "/comments",
+        url: "api/articles/" + id + "comments",
         data: data,
 
         success: function (res) {
